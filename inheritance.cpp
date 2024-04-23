@@ -1,57 +1,43 @@
 #include<iostream>
-#include<conio.h>
-
 using namespace std;
 
-class student{
+class parson {
 
-public:
-
+    public:
     string name;
-
-    int id;
+    int age;
 
     void display1(){
-
-    cout<<"NAME= "<<name<<endl;
-
-    cout<<"ID= " <<id<<endl;
-
+    
+    cout<<"name=  "<<name<<endl;
+    cout<<"Age=   "<<age<<endl;
     }
+
 };
+class student :public parson{
 
-
-class person :public student
-{
-public:
-
-    double gpa;
-
+    public:
+    int id;
     void display2(){
-
-    cout<<"GPA= "<<gpa<<endl;
-
+    cout<<"ID=   "<<id<<endl;
     display1();
-
+    
+    
     }
 
 };
 
-int main(){
-
-
-person s1;
-
-s1.name="md ajharul islam";
-
-s1.id=101;
-
-s1.gpa=3.99;
-
-s1.display2();
 
 
 
-
-getch();
+int main()
+{
+    
+    student s1;
+    s1.name="Ajharul islam";
+    s1.age=20;
+    s1.id=1336;
+    s1.display2();
+    
+    return 0;
 }
